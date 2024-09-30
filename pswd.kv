@@ -1,0 +1,81 @@
+<MyLayout>
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        
+        Label:
+            text: "Welcome! To Your Personal Password Manager"
+            font_size: 20
+
+        Label:
+            text: "Please Choose Your Constraints"
+            font_size: 25
+
+        GridLayout:
+            rows:4
+            cols:2
+
+            Label:
+                id: text_label
+                text: 'Please Choose the number of \n symbols to be used:- '
+                font_size:24
+            
+            Spinner:
+                id: sym1
+                text: 'Choose'
+                values: ['2','3','4']
+
+                on_text: root.spinner_clicked(sym1.text)
+            
+
+
+            Label:
+                id: text_label_n
+                text: 'Please Choose the number of \n numerals to be used:- '
+                font_size:24
+            
+            Spinner:
+                id: num1
+                text: 'Choose'
+                values: ['2','3','4']
+
+                on_text: root.spinner_n_clicked(num1.text)
+
+
+            
+            Label:
+                id: text_label_c
+                text: 'Please Choose the number of \n Capital Letters to be used:-  '
+                font_size:24
+            
+            Spinner:
+                id: cap1
+                text: 'Choose'
+                values: ['2','3','4']
+
+                on_text: root.spinner_c_clicked(cap1.text)
+            
+            
+            Label:
+                id: text_label_s
+                text: 'Please Choose the number of \n Small Letters to be used:-  '
+                font_size:24
+            
+            Spinner:
+                id: sml1
+                text: 'Choose'
+                values: ['2','3','4']
+
+                on_text: root.spinner_s_clicked(sml1.text)
+            
+            Label:
+                text: ''
+            
+            Label:
+                text: ''
+
+            
+          
+            
+            
+       
