@@ -36,7 +36,7 @@ class MyLayout(Widget):
         smlletter = value
     
     def press(self):
-        def passmanager(number=2, capletter=2, smlleter=2, symbol=2):
+        def passmanager():
             alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'] #alphabets
             sym = ['@','#','$','%','^','&','*','(',')','_','-','+','=','{','}','|',':',';','"','<',',','>','.','?'] #Symbols
             mainpass = [] #main password
@@ -85,9 +85,7 @@ class MyLayout(Widget):
         return Label(text=passmanager(), font_size = 72)
         
 
-            
-            
-    
+               
 
 class pswd(App):
     def build(self):
