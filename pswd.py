@@ -6,13 +6,14 @@ from kivy.uix.widget import Widget
 from kivy.clock import Clock
 from kivy.uix.label import Label
 
-
+# still screen --> comes up for 3 seconds
 class Still(App):
     def build(self):
         Clock.schedule_once(self.stop, 3)
         return Label(text='Password Manager', font_size = 72)
     
 class MyLayout(Widget):
+    # Global Variables for further use
     global symbol
     global number
     global capletter
@@ -20,8 +21,9 @@ class MyLayout(Widget):
     global password
     global LI
     
-    LI =[2,2,2,2]
+    LI =[2,2,2,2] #Default values of constraints
 
+    # getting the constraint new value
     def spinner_clicked(self, value1):
         self.ids.text_label.text=f'No. of Symbol chosen: {value1}'
         LI[0]=int(value1)
