@@ -31,11 +31,11 @@ class MyLayout(Widget):
         LI[1]=int(value2)
 
     def spinner_c_clicked(self, value3):
-        self.ids.text_label_c.text=f'No. of Capital Letter \n chosen: {value3}'
+        self.ids.text_label_c.text=f'No. of Capital Letter chosen: {value3}'
         LI[2]=int(value3)
     
     def spinner_s_clicked(self, value4):
-        self.ids.text_label_s.text=f'No. of Small Letters \n chosen: {value4}'
+        self.ids.text_label_s.text=f'No. of Small Letters chosen: {value4}'
         LI[3]=int(value4)
 
     def passmanager(self):
@@ -87,7 +87,8 @@ class MyLayout(Widget):
         # making the password
         password=''.join(mainpass)
         print(password)
-        return Label(text='Password Manager', font_size = 42)
+        self.pswd.text=f'Your Password is {password}'
+
 
 
         

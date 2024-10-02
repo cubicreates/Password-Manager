@@ -1,15 +1,25 @@
 <MyLayout>
+    pswd: kvpswd
     GridLayout:
         cols: 1
         size: root.width, root.height
         
         Label:
             text: "Welcome! To Your Personal Password Manager"
-            font_size: 20
+            font_size: 35
+            size_hint_y: None
+            height: 65
 
         Label:
             text: "Please Choose Your Constraints"
             font_size: 25
+            size_hint_y: None
+            height: 50
+        
+        Label:
+            text: ''
+            size_hint_y: None
+            height: 15
 
         GridLayout:
             rows:4
@@ -18,66 +28,87 @@
             
             Label:
                 id: text_label
-                text: 'Please Choose the number of \n symbols to be used:- '
-                font_size:15
+                text: 'Please Choose the number of \nsymbols to be used:- '
+                font_size: 23
+                size_hint_y: None
+                height: 75
             
             Spinner:
                 id: sym1
                 text: 'Choose'
                 values: ['2','3','4']
-
+                font_size: 35
+                size_hint_y: None
+                height: 75
                 on_text: root.spinner_clicked(sym1.text)
             
 
 
             Label:
                 id: text_label_n
-                text: 'Please Choose the number of \n numerals to be used:- '
-                font_size:15
+                text: 'Please Choose the number of \nnumerals to be used:- '
+                font_size: 23
+                size_hint_y: None
+                height: 75
             
             Spinner:
                 id: num1
                 text: 'Choose'
                 values: ['2','3','4']
-
+                font_size: 35
+                size_hint_y: None
+                height: 75
                 on_text: root.spinner_n_clicked(num1.text)
 
 
             
             Label:
                 id: text_label_c
-                text: 'Please Choose the number of \n Capital Letters to be used:-  '
-                font_size:15
+                text: 'Please Choose the number of \nCapital Letters to be used:-  '
+                font_size: 23
+                size_hint_y: None
+                height: 75
             
             Spinner:
                 id: cap1
                 text: 'Choose'
                 values: ['2','3','4']
-
+                font_size: 35
+                size_hint_y: None
+                height: 75
                 on_text: root.spinner_c_clicked(cap1.text)
             
             
             Label:
                 id: text_label_s
                 text: 'Please Choose the number of \n Small Letters to be used:-  '
-                font_size:15
+                font_size: 23
+                size_hint_y: None
+                height: 75
             
             Spinner:
                 id: sml1
                 text: 'Choose'
                 values: ['2','3','4']
-
+                font_size: 35
+                size_hint_y: None
+                height: 75
                 on_text: root.spinner_s_clicked(sml1.text)
             
-            Label:
-                text: ''
-            
-            Label:
-                text: ''
 
         Button:
             text: 'Generate'
+            font_size: 35
+            size_hint_y: None
+            height: 80
             on_press: root.passmanager()
+        
+        Label:
+            id: kvpswd
+            text: ''
+            size_hint_y: None
+            height: 70
+            font_size: 20
 
 
             
