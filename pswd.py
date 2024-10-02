@@ -98,6 +98,7 @@ class MyLayout(Widget):
 
 class pswd(App):
     def build(self):
+        self.icon = 'myIcon.png'
         return MyLayout()
     
 if __name__ == '__main__':
