@@ -42,7 +42,7 @@ class MyLayout(Widget):
 
     def passmanager(self):
         alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'] #alphabets
-        sym = ['@','#','$','%','^','&','*','(',')','_','-','+','=','{','}','|',':',';','"','<',',','>','.','?'] #Symbols
+        sym = ['(',')','_','-',';',',','.'] #Symbols
         mainpass = [] #main password
 
         number = LI[0]
@@ -78,7 +78,7 @@ class MyLayout(Widget):
         # getting symbols
         i=1
         while i<=symbol:
-            s1= randint(0,23)
+            s1= randint(0,6)
             s= sym[s1]
             mainpass.append(s)
             i+=1
@@ -93,9 +93,6 @@ class MyLayout(Widget):
 
 
 
-        
-   
-
 class pswd(App):
     def build(self):
         self.icon = 'myIcon.png'
@@ -104,3 +101,4 @@ class pswd(App):
 if __name__ == '__main__':
     Still().run()
     pswd().run()
+    print('~Cubicreates')

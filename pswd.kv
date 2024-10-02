@@ -8,16 +8,28 @@
         size: root.width, root.height
         
         Label: #Head Title
-            text: "Welcome! To Your Personal Password Manager"
+            markup: True
+            text: "[b][font=Times]Welcome! To Your Personal Password Manager[/font][/b]"
             font_size: 35
             size_hint_y: None
             height: 65
 
         Label: #Sub Title
-            text: "Please Choose Your Constraints"
+            markup: True
+            text: "[b][font=Times]Please Choose Your Constraints[/font][/b]"
             font_size: 25
             size_hint_y: None
             height: 50
+            # Adding colors
+            background_normal: ''
+            background_color:(1,1,1,1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            color:(0,0,0,1)
         
         Label: #Blank Space
             text: ''
@@ -32,87 +44,152 @@
             
             # Constraint 1 --> Symbol
             Label:
+                markup: True
                 id: text_label
-                text: 'Please Choose the number of \nsymbols to be used:- '
+                text: '[font=Verdana]Please Choose the number of \nsymbols to be used:- [/font]'
                 font_size: 23
                 size_hint_y: None
                 height: 75
+                # Adding colors
+                background_normal: ''
+                background_color:(3/255,67/255,223/255,1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
             
             Spinner:
+                markup:True
                 id: sym1
-                text: 'Choose'
+                text: '[b][font=Comic]Choose[/font][/b]'
                 values: ['2','3','4']
-                font_size: 35
+                font_size: 40
                 size_hint_y: None
                 height: 75
                 on_text: root.spinner_clicked(sym1.text)
+                # Adding Colors
+                background_normal: ''
+                background_color: (19/255,162/255,32/255,1)
 
             # Constraint 2 --> Number
             Label:
+                markup: True
                 id: text_label_n
-                text: 'Please Choose the number of \nnumerals to be used:- '
+                text: '[font=Verdana]Please Choose the number of \nnumerals to be used:- [/font]'
                 font_size: 23
                 size_hint_y: None
                 height: 75
+                # Adding colors
+                background_normal: ''
+                background_color:(8/255,57/255,178/255,1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
             
             Spinner:
+                markup:True
                 id: num1
-                text: 'Choose'
+                text: '[b][font=Comic]Choose[/font][/b]'
                 values: ['2','3','4']
-                font_size: 35
+                font_size: 40
                 size_hint_y: None
                 height: 75
                 on_text: root.spinner_n_clicked(num1.text)
+                # Adding Colors
+                background_normal: ''
+                background_color: (49/255,15/255,15/255,1)
+                color: (137/255,155/255,151/255,1)
 
 
             # Constraint 3 --> Capital Letters
             Label:
+                markup:True
                 id: text_label_c
-                text: 'Please Choose the number of \nCapital Letters to be used:-  '
+                text: '[font=Verdana]Please Choose the number of \nCapital Letters to be used:-  [/font]'
                 font_size: 23
                 size_hint_y: None
                 height: 75
+                # Adding colors
+                background_normal: ''
+                background_color:(7/255,45/255,138/255,1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
             
             Spinner:
+                markup:True
                 id: cap1
-                text: 'Choose'
+                text: '[b][font=Comic]Choose[/font][/b]'
                 values: ['2','3','4']
-                font_size: 35
+                font_size: 40
                 size_hint_y: None
                 height: 75
                 on_text: root.spinner_c_clicked(cap1.text)
+                # Adding Colors
+                background_normal: ''
+                background_color: (255/255,0/255,0/255,1)
+                color: (255/255,160/255,3/255,1)
             
             # Constraint 4 --> Small Letters
             Label:
+                markup:True
                 id: text_label_s
-                text: 'Please Choose the number of \n Small Letters to be used:-  '
+                text: '[font=Verdana]Please Choose the number of \nSmall Letters to be used:-  [/font]'
                 font_size: 23
                 size_hint_y: None
                 height: 75
+                # Adding colors
+                background_normal: ''
+                background_color:(0/255,35/255,122/255,1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
             
             Spinner:
+                markup:True
                 id: sml1
-                text: 'Choose'
+                text: '[b][font=Comic]Choose[/font][/b]'
                 values: ['2','3','4']
-                font_size: 35
+                font_size: 40
                 size_hint_y: None
                 height: 75
                 on_text: root.spinner_s_clicked(sml1.text)
+                # Adding Colors
+                background_normal: ''
+                background_color: (45/255,30/255,59/255,1)
+                color: (255/255,255/255,141/255,1)
             
         # Button
         Button:
-            text: 'Generate'
-            font_size: 35
+            markup: True
+            text: '[b][u][font=Trebuc]Generate[/font][/u][/b]'
+            font_size: 55
             size_hint_y: None
             height: 90
-            size_hint_x: None
-            width: 800
             on_press: root.passmanager()
+            # Adding Colors
+            background_normal: ''
+            background_color: (76/255,10/255,179/255,1)
+            color:(0,0,0,1)
         
         # Output
         Label:
+            markup:True
             id: kvpswd
-            text: ''
+            text: '[font=Verdana] [/font]'
             size_hint_y: None
             height: 70
             font_size: 30
+            # Adding Colors
+            color: (76/255,10/255,179/255,1)
